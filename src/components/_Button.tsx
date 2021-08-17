@@ -1,4 +1,4 @@
-import tw, { styled, css, theme } from 'twin.macro'
+import tw, {styled} from "twin.macro";
 // import styled from "@emotion/styled";
 
 type ButtonProps = {
@@ -18,9 +18,6 @@ export const Button = styled.button(({variant, isSmall}: ButtonProps) => [
 
     // Combine regular css with tailwind classes within backticks
     variant === 'secondary' && [
-        css`
-      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
-    `,
         tw`border-2 border-yellow-600`,
     ],
 
@@ -28,10 +25,5 @@ export const Button = styled.button(({variant, isSmall}: ButtonProps) => [
     isSmall ? tw`text-sm` : tw`text-lg`,
 
     // The theme import can supply values from your tailwind.config.js
-    css`
-    //color: ${theme`colors.white`};
-    //color: ${theme`colors.electric`};
-    color: ${theme`colors.ribbon`};
-    //color: ${theme`colors.green`};
-  `,
+
 ])
